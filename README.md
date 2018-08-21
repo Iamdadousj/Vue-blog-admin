@@ -1,4 +1,4 @@
-# vue-scscms
+# vue-B
 
 基于node.js+koa2+mysql+vue2.0+Element博客管理系统
 
