@@ -108,12 +108,14 @@ npm run server
 │   ├── assets // 相关静态资源存放
 │   ├── components // 公用组件
 │   │      ├── index.js
+|   |      |——Sliderbar.vue //侧边
 │   │      └── upFile.vue // 上传组件
 │   ├── page // 单文件组件
 │   │    ├── Article // 文章
 │   │    │     ├── add.vue //添加、编辑文章
 │   │    │     ├── list.vue //文章列表
 │   │    │     └── sort.vue //文章分类
+|   |    |——Mypage //博客前台页面  暂未写入
 │   │    ├── UpFile // 上传
 │   │    │     └── list.vue //上传列表
 │   │    ├── User // 用户

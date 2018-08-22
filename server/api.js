@@ -233,7 +233,7 @@ async function register(ctx) {
                 if(success){
                     //发送激活邮件
                     let link = `${common.web_domain}/api/active/${data.user_name}/${data.pass_word.replace(/\//g,'')}`;
-                    let body = `您好：${data.user_name} <br/>欢迎注册【${common.web_name}】网站，请点击<a href="${link}" target="_blank">${link}</a>链接进行激活您的帐号！<p><img src="http://www.scscms.com/images/whiteSCS.png" /></p>`;
+                    let body = `您好：${data.user_name} <br/>欢迎注册【${common.web_name}】网站，请点击<a href="${link}" target="_blank">${link}</a>链接进行激活您的帐号！<p><img src="/static/logo.png" /></p>`;
                     if(await sendEmail(data.user_email, common.web_name+'【帐号激活】', body)){
 						await connection.end();
                         return ctx.body = {
@@ -350,7 +350,7 @@ async function retrieve(ctx) {
             if(result.affectedRows === 1){
                 //发激活邮件
                 let link = `${common.web_domain}/api/findPassword/${data.user_email}/${extend.password.replace(/\//g,'')}`;
-                let body = `您好：${rows[0].user_name} <br/>欢迎使用【${common.web_name}】网站密码找回功能，请点击<a href="${link}" target="_blank">${link}</a>链接进行重设您的新密码为：【${data.pass_word}】！<p><img src="http://www.scscms.com/images/whiteSCS.png" /></p>`;
+                let body = `您好：${rows[0].user_name} <br/>欢迎使用【${common.web_name}】网站密码找回功能，请点击<a href="${link}" target="_blank">${link}</a>链接进行重设您的新密码为：【${data.pass_word}】！<p><img src="/static/logo.png" /></p>`;
                 if(await sendEmail(data.user_email, common.web_name+'【密码找回】', body)){
                     await connection.end();
                     return ctx.body = {

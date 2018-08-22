@@ -15,12 +15,13 @@ export default {
     },
     //邮件服务配置
     emailServer:{
+        service: 'SMTP',
         host: 'smtp.126.com',
         port: 465,
         secure: true,
         auth: {
             user: 'dadoubw@126.com',
-            pass: 'xl666888'
+            pass: 'xl111222'
         }
     },
     //公用：获取客户端IP
